@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <transition>
+  <div id="main">
+    <transition mode="out-in">
       <router-view></router-view>
     </transition>
 
@@ -23,12 +23,12 @@ export default {
     return {
       pageMenu: [
         {
-          to: "LayoutJueJin",
-          label: "掘金文章布局"
-        },
-        {
           to: "LayoutFlex",
           label: "Flex 布局"
+        },
+        {
+          to: "LayoutJueJin",
+          label: "掘金文章布局"
         },
         {
           to: "layoutThree",
@@ -43,20 +43,36 @@ export default {
 <style>
 @import "../static/css/normalize.css";
 @import "../static/css/reset.css";
-body {
-  width: 100vw;
-  height: 100vh;
+html {
+  font-size: 16px;
 }
-#app {
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+#main {
   width: 100%;
   height: 100%;
 }
 .page-menu {
   position: fixed;
-  padding: 1em;
-  bottom: 1em;
-  right: 1em;
+  padding: 1rem;
+  bottom: 1rem;
+  right: 1rem;
   background-color: coral;
+}
+.bg-primary {
+  background-color: #2196f3;
+}
+.text-primary {
+  color: black;
+}
+.radius-box {
+  background-color: white;
+  border-radius: 0.2rem;
+  box-shadow: 0.2rem 0.2rem #eee;
 }
 </style>
 

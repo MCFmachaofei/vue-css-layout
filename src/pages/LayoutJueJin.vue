@@ -1,21 +1,16 @@
 <template>
-  <div class="cotainer">
-    <div class="header">
-      <div>header</div>
-    </div>
-    <div class="side side-left">
-      <div>side-left</div>
-    </div>
-    <div class="content">
-      <div>content</div>
-      <div>content</div>
-    </div>
-    <div class="side side-right">
-      <div>side-right</div>
-    </div>
-    <div class="footer">
-      <div>footer</div>
-    </div>
+  <div class="container text-primary">
+    <header class="bg-primary">
+      <div class="header-main">
+        header
+      </div>
+    </header>
+    <main>
+      <div class="radius-box main-content">
+        123
+      </div>
+      <!-- <div class="radius-box main-side">side</div> -->
+    </main>
   </div>
 </template>
 
@@ -26,47 +21,42 @@ export default {
 </script>
 
 <style scoped>
-.cotainer {
+.container {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  text-align: center;
 }
-
-.header {
+header {
   width: 100%;
-  height: 10%;
-  background-color: beige;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+}
+.header-main {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+main {
+  max-width: 60rem;
+  margin: 7rem auto 0;
+}
+.main-content {
+  width: 45rem;
+  height: 50rem;
+  float: left;
+}
+.main-side {
+  float: right;
+  width: 10rem;
+  height: 10rem;
 }
 
-.content {
-  background-color: darkgray;
-  order: 2;
-  min-height: 50%;
-  max-width: 80%;
-}
-
-.side {
-  background-color: aquamarine;
-}
-
-.side-left {
-  order: 1;
-  width: 10%;
-}
-
-.side-right {
-  order: 3;
-  width: 10%;
-}
-
-.footer {
-  order: 4;
-  width: 100%;
-  height: 10%;
-  background-color: darkmagenta;
+@media (max-width: 45rem) {
+  .main-content {
+    width: 100%;
+  }
+  .main-side {
+    display: none;
+  }
 }
 </style>
 
