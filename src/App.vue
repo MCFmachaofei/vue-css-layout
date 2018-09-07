@@ -24,15 +24,15 @@ export default {
       pageMenu: [
         {
           to: "LayoutJueJin",
-          label: "LayoutJueJin"
+          label: "掘金文章布局"
         },
         {
-          to: "layoutTwo",
-          label: "layoutTwo"
+          to: "LayoutFlex",
+          label: "Flex 布局"
         },
         {
           to: "layoutThree",
-          label: "layoutThree"
+          label: "三栏布局"
         }
       ]
     };

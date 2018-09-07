@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "LayoutJueJin"
+  name: "LayoutFlex"
 };
 </script>
 
@@ -44,8 +44,8 @@ export default {
 .content {
   background-color: darkgray;
   order: 2;
+  width: 80%;
   min-height: 50%;
-  max-width: 80%;
 }
 
 .side {
