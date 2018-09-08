@@ -8,7 +8,6 @@
     </div>
     <div class="content bg-primary--1">
       <div>
-        <p>文章标题</p>
       </div>
     </div>
     <div class="side side-right bg-primary--3">

@@ -4,15 +4,13 @@
       <router-view></router-view>
     </transition>
 
-    <transition>
-      <div class="radius-box page-menu bg-primary--4">
-        <ul>
-          <router-link v-for="(item, index) in pageMenu" :key="index" tag="li" :to="item.to" exact>
-            <a>{{ item.label }}</a>
-          </router-link>
-        </ul>
-      </div>
-    </transition>
+    <div class="animated bounce radius-box page-menu bg-primary--4">
+      <ul>
+        <router-link v-for="(item, index) in pageMenu" :key="index" tag="li" :to="item.to" exact>
+          <a>{{ item.label }}</a>
+        </router-link>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -43,6 +41,8 @@ export default {
 <style>
 @import "../static/css/normalize.css";
 @import "../static/css/reset.css";
+@import "animate.css";
+
 html {
   font-size: 14px;
   color: white;
