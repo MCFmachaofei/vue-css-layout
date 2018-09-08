@@ -5,7 +5,7 @@
     </transition>
 
     <transition>
-      <div class="page-menu">
+      <div class="radius-box page-menu bg-primary--4">
         <ul>
           <router-link v-for="(item, index) in pageMenu" :key="index" tag="li" :to="item.to" exact>
             <a>{{ item.label }}</a>
@@ -44,35 +44,37 @@ export default {
 @import "../static/css/normalize.css";
 @import "../static/css/reset.css";
 html {
-  font-size: 16px;
-}
-body {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #fafafa;
-}
-#main {
-  width: 100%;
-  height: 100%;
+  font-size: 14px;
+  color: white;
 }
 .page-menu {
   position: fixed;
   padding: 1rem;
   bottom: 1rem;
   right: 1rem;
-  background-color: coral;
 }
-.bg-primary {
-  background-color: #2196f3;
+.page-menu li {
+  padding: 0.3rem;
 }
-.text-primary {
-  color: black;
+</style>
+
+<style>
+.bg-primary--1 {
+  background-color: #1e88e5;
 }
+.bg-primary--2 {
+  background-color: #1976d2;
+}
+.bg-primary--3 {
+  background-color: #1565c0;
+}
+.bg-primary--4 {
+  background-color: #e3f2fd;
+}
+
 .radius-box {
-  background-color: white;
   border-radius: 0.2rem;
-  box-shadow: 0.2rem 0.2rem #eee;
+  box-shadow: 0.2rem 0.2rem 0.2rem #eee;
 }
 </style>
 
